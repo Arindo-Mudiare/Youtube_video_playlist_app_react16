@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import SearchBar from './components/search_bar';
 
-const App = () => <div>My furst React Komponent!!</div>;
+const API_KEY = 'AIzaSyBzVVlu4cUX88aoJWs0Pi9TfCvfOMRMNxs';
+const App = () => <div> <SearchBar /> </div>;
 
 ReactDOM.render(<App />,document.querySelector('.container'));
 
