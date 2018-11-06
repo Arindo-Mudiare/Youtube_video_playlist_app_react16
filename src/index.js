@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YouTubeSearch from 'youtube-api-search';
@@ -17,7 +18,7 @@ class App extends Component {
       videos: [],
       selectedVideo: null
     }
-    this.videoSearch('vevo reggae');
+    this.videoSearch('');
   }
   videoSearch (term){
     YouTubeSearch({key:API_KEY, term: term}, (videos) => {
@@ -29,13 +30,17 @@ class App extends Component {
   }
 
   render() {
+    // throttle search function with Lodash
+    const videoSearch = _.debounce((term) => {this.videoSearch(term) }, 300);
     return (
       <div> 
-        <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
-        <VideoDetail video={this.state.selectedVideo}/>
+      <h1 className="app_header">Mini Youtube App</h1>
+        <SearchBar onSearchTermChange={videoSearch} />
+        
         <VideoList 
           onVideoSelect={selectedVideo => this.setState({selectedVideo})}
           videos={this.state.videos} /> 
+          <VideoDetail video={this.state.selectedVideo}/>
       </div>
     );
   }

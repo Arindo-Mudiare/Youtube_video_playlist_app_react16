@@ -27,3 +27,25 @@
   background-color: #797979;
   color: #fff;
 }
+
+.floater-left{
+  float: right;
+  /* position: relative;
+  top: 85px; */
+}
+
+.app_header{
+  text-align: center;
+  padding-top: 10px;
+}
+.details{
+  padding: 10px;
+}
+.vid_title {
+  font-weight: 800;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.media-object{
+  margin-right: 10px;
+}
