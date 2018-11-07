@@ -30,6 +30,7 @@
 
 .floater-left{
   float: right;
+  padding-bottom: 30px;
   /* position: relative;
   top: 85px; */
 }
@@ -48,4 +49,11 @@
 }
 .media-object{
   margin-right: 10px;
+}
+/* search bar custom styles */
+.search_form_pad{
+  margin-bottom: 30px;
+}
+.left-pad-search {
+  margin-left: 80px;
 }

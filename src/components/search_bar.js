@@ -11,10 +11,10 @@ class SearchBar extends Component {
   }
   render() {
     return (
-    <div className="search-bar">
-      <br></br>
-      <input onChange={(event) => this.onInputChange(event.target.value) }/>
-    </div> 
+      <form class="form-inline active-cyan-3 active-cyan-4 search_form_pad">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3 w-75 left-pad-search" type="text" placeholder="Search for youtube videos" aria-label="Search" onChange={(event) => this.onInputChange(event.target.value) } />
+      </form>
     );
   }
   onInputChange(term) {
