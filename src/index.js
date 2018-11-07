@@ -34,7 +34,7 @@ class App extends Component {
     const videoSearch = _.debounce((term) => {this.videoSearch(term) }, 300);
     return (
       <div> 
-      <h1 className="app_header">Mini Youtube App</h1>
+      <h1 className="app_header">Irap-Tube</h1>
         <SearchBar onSearchTermChange={videoSearch} />
         
         <VideoList 
